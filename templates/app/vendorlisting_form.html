@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+    <title>Working on it example</title>
+  </head>
+  <body>
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <h4>your daily update here</h4>
+      <br>
+    <br>
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p}}
+      <input type="submit" value="Save">
+  </form>
+  <br>
+  <br>
+  <h5>Your listing information will be updated</h5>
+  <br>
+  <br>
+
+</div>
+<div class="container">
+<input type="date" name="date" id="date" value="" />
+<input type="submit" value="Save">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script src="/static/app/jquery-ui.js"></script>
+</div>
+
+</body>
+
+
+</html>
+<script src="/static/app/jquery-ui.js"></script>
+<script>
+
+$('#date').datepicker();
+
+</script>

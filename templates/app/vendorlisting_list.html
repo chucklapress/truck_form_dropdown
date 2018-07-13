@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <h4>your daily listings</h4>
+      <br>
+    <br>
+    {% for object in object_list %}
+  <br>
+  <br>
+  <h3>vendor, {{ object.Name }}</h3>
+  <h3>date, {{ object.dateServing }}</h3>
+  <h3>location, {{object.location}}</h3>
+  <h3>address,{{object.Address}}</h3>
+  <h3>zip code, {{object.zipCode}}</h3>
+  <h3>beginning,{{object.beginning}}</h3>
+  <h3>ending,{{object.ending}}</h3>
+  <h3>city, {{object.city}}</h3>
+  <h3>tracking location, {{object.userlocation}}</h3>
+  <br>
+  <br>
+
+
+  {% endfor %}
+  <h5>Thats it for today</h5>
+  <br>
+  <br>
+
+    </div>
+
+  </body>
+</html>
